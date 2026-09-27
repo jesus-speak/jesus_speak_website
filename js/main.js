@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
    1. Header Sticky Effect
    -------------------------------------------------------------------------- */
 function initHeader() {
-  const header = document.querySelector('.site-header');
+  const header = document.querySelector('.site-header-pill, .site-header');
   if (!header) return;
 
   window.addEventListener('scroll', () => {

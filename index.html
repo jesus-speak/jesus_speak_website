@@ -134,45 +134,41 @@
   <div class="ambient-dust" aria-hidden="true"></div>
 
   <!-- ========================================================================
-       1. Navigation Header
+       1. Floating Glassmorphic Pill Dock Navigation
        ======================================================================== -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand">
+  <header class="site-header-pill" id="siteHeader">
+    <div class="pill-nav-inner">
+      <a href="#" class="brand-pill" aria-label="Jesus Speaks Now">
         <div class="brand-icon-wrap">
-          <img src="assets/images/app_icon.png" alt="Jesus Speaks Now Icon" width="44" height="44">
+          <img src="assets/images/app_icon.png" alt="Jesus Speaks Now" width="36" height="36">
         </div>
-        <div class="brand-text">
-          <span class="brand-title">JESUS SPEAKS <span>NOW</span></span>
-          <span class="brand-tagline">Walk with Christ</span>
-        </div>
+        <span class="brand-name">Jesus Speaks <span class="gold-text">Now</span></span>
       </a>
 
-      <nav aria-label="Main Navigation">
+      <nav class="pill-nav-center" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="#premiere" class="nav-link">Teaching Spotlight</a></li>
-          <li><a href="#stories" class="nav-link">Stories & Reels</a></li>
+          <li><a href="#premiere" class="nav-link">Teachings</a></li>
+          <li><a href="#stories" class="nav-link">Stories</a></li>
           <li><a href="#prayer" class="nav-link">Pray with AI</a></li>
           <li><a href="#characters" class="nav-link">Characters</a></li>
           <li><a href="#posters" class="nav-link">Verse Studio</a></li>
           <li><a href="#quiz" class="nav-link">Quizzes</a></li>
           <li><a href="#plans" class="nav-link">Plans</a></li>
-          <li><a href="#support" class="nav-link">Support & FAQ</a></li>
+          <li><a href="#support" class="nav-link">Support</a></li>
         </ul>
       </nav>
 
-      <div class="header-actions">
-        <a href="#download" class="btn btn-primary btn-sm">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
+      <div class="pill-nav-actions">
+        <a href="#download" class="btn btn-primary btn-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          Get The App
+          <span>Get The App</span>
         </a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -183,15 +179,15 @@
 
     <!-- Mobile Drawer -->
     <div class="mobile-nav" id="mobileNav">
-      <a href="#premiere" class="nav-link">Teaching Spotlight</a>
-      <a href="#stories" class="nav-link">Stories & Reels</a>
+      <a href="#premiere" class="nav-link">Teachings</a>
+      <a href="#stories" class="nav-link">Stories</a>
       <a href="#prayer" class="nav-link">Pray with AI</a>
       <a href="#characters" class="nav-link">Characters of Faith</a>
       <a href="#posters" class="nav-link">Verse Poster Studio</a>
       <a href="#quiz" class="nav-link">Episode Quizzes</a>
       <a href="#plans" class="nav-link">Reading Plans</a>
       <a href="#support" class="nav-link">Help & Support</a>
-      <a href="#download" class="btn btn-primary" style="margin-top: 10px;">Download Free App</a>
+      <a href="#download" class="btn btn-primary" style="margin-top: 10px; border-radius: 999px;">Download Free App</a>
     </div>
   </header>
 
