@@ -1,5 +1,5 @@
 /**
- * JESUS SPEAKS / WALK WITH CHRIST - OFFICIAL SHOWCASE WEBSITE
+ * JESUS SPEAKS NOW / WALK WITH CHRIST - OFFICIAL SHOWCASE WEBSITE
  * Interactive Functionality & Micro-Interactions
  */
 
@@ -373,7 +373,7 @@ function showQuizResults() {
           ${quizScore === QUIZ_QUESTIONS.length ? '🌟 Outstanding! You have built your faith on the Rock!' : '🕊️ Well done! Continue to meditate on the Word daily.'}
         </p>
         <p style="color: var(--text-secondary); font-size: 0.95rem;">
-          In the Jesus Speaks app, every episode features quizzes with streak badges, leaderboards, and scripture rewards.
+          In the Jesus Speaks Now app, every episode features quizzes with streak badges, leaderboards, and scripture rewards.
         </p>
       </div>
     `;
@@ -458,7 +458,7 @@ function initSupportForm() {
         form.reset();
 
         showToast('Message sent! Our team will reply within 24 hours.');
-        alert('🕊️ Thank You for Reaching Out!\n\nYour message has been received with care. The Jesus Speaks team will respond within 24 hours.\n\nMay God bless your journey today.');
+        alert('🕊️ Thank You for Reaching Out!\n\nYour message has been received with care. The Jesus Speaks Now team will respond within 24 hours.\n\nMay God bless your journey today.');
       }, 1200);
     });
   }
@@ -466,10 +466,10 @@ function initSupportForm() {
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      navigator.clipboard.writeText('support@jesusspeaks.app').then(() => {
-        showToast('Copied support@jesusspeaks.app to clipboard');
+      navigator.clipboard.writeText('support@jesusspeaksnow.com').then(() => {
+        showToast('Copied support@jesusspeaksnow.com to clipboard');
       }).catch(() => {
-        showToast('support@jesusspeaks.app');
+        showToast('support@jesusspeaksnow.com');
       });
     });
   }

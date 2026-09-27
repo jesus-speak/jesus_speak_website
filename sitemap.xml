@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://jesusspeaks.app/</loc>
+    <loc>https://jesusspeaksnow.com/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
-      <video:thumbnail_loc>https://jesusspeaks.app/assets/images/rock_vertical.png</video:thumbnail_loc>
-      <video:title>Build Your Life on the Rock — Jesus Speaks</video:title>
+      <video:thumbnail_loc>https://jesusspeaksnow.com/assets/images/rock_vertical.png</video:thumbnail_loc>
+      <video:title>Build Your Life on the Rock — Jesus Speaks Now</video:title>
       <video:description>The parable of the wise and foolish builders from Matthew 7:24–27 in high-production cinematic animation.</video:description>
-      <video:content_loc>https://jesusspeaks.app/assets/videos/teaching_preview.mp4</video:content_loc>
+      <video:content_loc>https://jesusspeaksnow.com/assets/videos/teaching_preview.mp4</video:content_loc>
       <video:publication_date>2026-09-27</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
