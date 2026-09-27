@@ -1,5 +1,5 @@
 /**
- * JESUS AI / WALK WITH CHRIST - OFFICIAL SHOWCASE WEBSITE
+ * JESUS SPEAKS / WALK WITH CHRIST - OFFICIAL SHOWCASE WEBSITE
  * Interactive Functionality & Micro-Interactions
  */
 
@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initMobileMenu();
   initPhoneVideoPlayer();
-  initVideoModal();
   initPrayerSimulator();
   initPosterCustomizer();
   initInteractiveQuiz();
@@ -63,7 +62,6 @@ function initPhoneVideoPlayer() {
   const audioBtn = document.getElementById('audioToggleBtn');
   const audioIcon = document.getElementById('audioIcon');
   const progressBar = document.getElementById('videoProgressBar');
-  const phoneDevice = document.querySelector('.phone-device');
 
   if (!video) return;
 
@@ -74,7 +72,7 @@ function initPhoneVideoPlayer() {
   const playPromise = video.play();
   if (playPromise !== undefined) {
     playPromise.catch(() => {
-      console.log('Autoplay was prevented by browser policy, waiting for user gesture.');
+      console.log('Autoplay waiting for user gesture.');
     });
   }
 
@@ -115,83 +113,15 @@ function initPhoneVideoPlayer() {
       `;
     }
   }
-
-  // Clicking on phone opens full theater modal
-  if (phoneDevice) {
-    phoneDevice.addEventListener('click', () => {
-      openVideoModal('assets/videos/teaching_full.mp4', 'Build Your Life on the Rock (Matthew 7:24)');
-    });
-  }
 }
 
 /* --------------------------------------------------------------------------
-   4. Video Theater Modal
-   -------------------------------------------------------------------------- */
-let modalVideo = null;
-let videoModalEl = null;
-
-function initVideoModal() {
-  videoModalEl = document.getElementById('videoModal');
-  modalVideo = document.getElementById('modalVideoPlayer');
-  const closeBtn = document.getElementById('modalCloseBtn');
-  const modalTitle = document.getElementById('modalTitle');
-
-  if (!videoModalEl || !modalVideo) return;
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeVideoModal);
-  }
-
-  videoModalEl.addEventListener('click', (e) => {
-    if (e.target === videoModalEl) {
-      closeVideoModal();
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && videoModalEl.classList.contains('open')) {
-      closeVideoModal();
-    }
-  });
-
-  // Attach buttons with [data-play-video]
-  document.querySelectorAll('[data-play-video]').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const videoSrc = btn.getAttribute('data-play-video') || 'assets/videos/teaching_full.mp4';
-      const title = btn.getAttribute('data-video-title') || 'Build Your Life on the Rock';
-      openVideoModal(videoSrc, title);
-    });
-  });
-}
-
-function openVideoModal(src, title) {
-  if (!videoModalEl || !modalVideo) return;
-  const modalTitle = document.getElementById('modalTitle');
-  if (modalTitle) modalTitle.textContent = title;
-
-  modalVideo.src = src;
-  modalVideo.muted = false;
-  videoModalEl.classList.add('open');
-  modalVideo.play().catch(e => console.log('Autoplay modal:', e));
-  document.body.style.overflow = 'hidden';
-}
-
-function closeVideoModal() {
-  if (!videoModalEl || !modalVideo) return;
-  modalVideo.pause();
-  modalVideo.currentTime = 0;
-  videoModalEl.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-/* --------------------------------------------------------------------------
-   5. Interactive "Pray with AI" Devotional Simulator
+   4. Interactive "Pray with AI" Devotional Simulator
    -------------------------------------------------------------------------- */
 const PRAYER_DATABASE = {
   anxiety: {
     prayer: "Heavenly Father, quiet my racing thoughts. Wrap me in Your supernatural peace which surpasses all human understanding. May Your gentle Holy Spirit guard my heart today, knowing You hold every tomorrow in Your hands.",
-    scripture: "Philippians 4:6-7 — Do not be anxious about anything, but in every situation, present your requests to God.",
+    scripture: "Philippians 4:6–7 — Do not be anxious about anything, but in every situation, present your requests to God.",
     topic: "Peace in Anxiety"
   },
   gratitude: {
@@ -201,7 +131,7 @@ const PRAYER_DATABASE = {
   },
   guidance: {
     prayer: "Lord Jesus, illuminate my path when the crossroads seem unclear. Grant me divine discernment and righteous wisdom, that every decision I make honors Your name and fulfills Your purpose.",
-    scripture: "Proverbs 3:5-6 — Trust in the Lord with all your heart and lean not on your own understanding.",
+    scripture: "Proverbs 3:5–6 — Trust in the Lord with all your heart and lean not on your own understanding.",
     topic: "Divine Guidance"
   },
   healing: {
@@ -259,7 +189,7 @@ function typePrayerText(fullText, element) {
 }
 
 /* --------------------------------------------------------------------------
-   6. Verse Poster Customizer
+   5. Verse Poster Customizer
    -------------------------------------------------------------------------- */
 const POSTER_TEMPLATES = [
   {
@@ -310,7 +240,7 @@ function initPosterCustomizer() {
 }
 
 /* --------------------------------------------------------------------------
-   7. Interactive Episode Quiz
+   6. Interactive Episode Quiz
    -------------------------------------------------------------------------- */
 const QUIZ_QUESTIONS = [
   {
@@ -439,11 +369,11 @@ function showQuizResults() {
   if (optionsWrap) {
     optionsWrap.innerHTML = `
       <div style="text-align: center; padding: 20px 0;">
-        <p style="font-size: 1.1rem; color: var(--gold-highlight); margin-bottom: 12px;">
+        <p style="font-size: 1.1rem; color: var(--gold-highlight); margin-bottom: 12px; font-weight: 700;">
           ${quizScore === QUIZ_QUESTIONS.length ? '🌟 Outstanding! You have built your faith on the Rock!' : '🕊️ Well done! Continue to meditate on the Word daily.'}
         </p>
         <p style="color: var(--text-secondary); font-size: 0.95rem;">
-          In the mobile app, every episode features quizzes with streak badges, leaderboards, and scripture rewards.
+          In the Jesus Speaks app, every episode features quizzes with streak badges, leaderboards, and scripture rewards.
         </p>
       </div>
     `;
@@ -463,7 +393,7 @@ function showQuizResults() {
 }
 
 /* --------------------------------------------------------------------------
-   8. FAQ Accordion (From support_screen.dart)
+   7. FAQ Accordion (From support_screen.dart)
    -------------------------------------------------------------------------- */
 function initFaqAccordion() {
   const items = document.querySelectorAll('.accordion-item');
@@ -499,7 +429,7 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   9. Support Message Form (From support_screen.dart)
+   8. Support Message Form (From support_screen.dart)
    -------------------------------------------------------------------------- */
 function initSupportForm() {
   const form = document.getElementById('supportForm');
@@ -528,7 +458,7 @@ function initSupportForm() {
         form.reset();
 
         showToast('Message sent! Our team will reply within 24 hours.');
-        alert('🕊️ Thank You for Reaching Out!\n\nYour message has been received with care. Our team typically responds within 24 hours.\n\nMay God bless your journey today.');
+        alert('🕊️ Thank You for Reaching Out!\n\nYour message has been received with care. The Jesus Speaks team will respond within 24 hours.\n\nMay God bless your journey today.');
       }, 1200);
     });
   }
@@ -536,17 +466,17 @@ function initSupportForm() {
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      navigator.clipboard.writeText('support@jesusai.app').then(() => {
-        showToast('Copied support@jesusai.app to clipboard');
+      navigator.clipboard.writeText('support@jesusspeaks.app').then(() => {
+        showToast('Copied support@jesusspeaks.app to clipboard');
       }).catch(() => {
-        showToast('support@jesusai.app');
+        showToast('support@jesusspeaks.app');
       });
     });
   }
 }
 
 /* --------------------------------------------------------------------------
-   10. Smooth Scroll Anchors
+   9. Smooth Scroll Anchors
    -------------------------------------------------------------------------- */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -571,7 +501,7 @@ function initSmoothScroll() {
 }
 
 /* --------------------------------------------------------------------------
-   11. Toast Notifications
+   10. Toast Notifications
    -------------------------------------------------------------------------- */
 let toastTimeout = null;
 function showToast(msg) {
