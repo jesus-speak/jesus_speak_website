@@ -5,27 +5,39 @@
 
 :root {
   /* Color Palette - Matching Flutter jesus_ai AppColors */
-  --bg-primary: #0B0B0F;        /* Deep Black */
-  --bg-secondary: #17171D;      /* Charcoal */
-  --bg-card: #121215;           /* Dark Slate */
-  --bg-surface: #1F2128;        /* Surface Slate */
+  --bg-primary: #0B0B0F;
+  /* Deep Black */
+  --bg-secondary: #17171D;
+  /* Charcoal */
+  --bg-card: #121215;
+  /* Dark Slate */
+  --bg-surface: #1F2128;
+  /* Surface Slate */
   --bg-glass: rgba(18, 18, 21, 0.78);
   --bg-glass-strong: rgba(23, 23, 29, 0.92);
 
   /* Gold Accents */
-  --gold-primary: #D6B16A;      /* Warm Gold */
-  --gold-secondary: #C89B4A;    /* Soft Gold */
-  --gold-highlight: #F2D49B;    /* Light Shimmer Gold */
+  --gold-primary: #D6B16A;
+  /* Warm Gold */
+  --gold-secondary: #C89B4A;
+  /* Soft Gold */
+  --gold-highlight: #F2D49B;
+  /* Light Shimmer Gold */
   --gold-glow: rgba(214, 177, 106, 0.28);
   --gold-glow-subtle: rgba(214, 177, 106, 0.12);
-  --gold-btn-bg: #E9D2A4;       /* Cream Gold Button */
-  --gold-btn-text: #2B2116;     /* Dark Brown Text */
+  --gold-btn-bg: #E9D2A4;
+  /* Cream Gold Button */
+  --gold-btn-text: #2B2116;
+  /* Dark Brown Text */
   --gold-olive: #8C7A45;
 
   /* Text Colors */
-  --text-primary: #F5F3EE;      /* Off White */
-  --text-secondary: #C9C9CC;    /* Light Gray */
-  --text-muted: #8D9098;        /* Gray */
+  --text-primary: #F5F3EE;
+  /* Off White */
+  --text-secondary: #C9C9CC;
+  /* Light Gray */
+  --text-muted: #8D9098;
+  /* Gray */
   --text-dim: #646875;
 
   /* Borders & Dividers */
@@ -49,7 +61,9 @@
 /* --------------------------------------------------------------------------
    Reset & Base Setup
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -77,14 +91,17 @@ body {
 ::-webkit-scrollbar {
   width: 9px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #252830;
   border-radius: 6px;
   border: 2px solid var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gold-secondary);
 }
@@ -130,7 +147,12 @@ body {
 }
 
 /* Typography Helpers - All Unified */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-primary);
   font-family: var(--font-main);
   font-weight: 700;
@@ -138,7 +160,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
-p, span, a, button, input, textarea, select, label {
+p,
+span,
+a,
+button,
+input,
+textarea,
+select,
+label {
   font-family: var(--font-main);
 }
 
@@ -175,8 +204,17 @@ p, span, a, button, input, textarea, select, label {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.8); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
 }
 
 .section-header {
@@ -291,7 +329,7 @@ p, span, a, button, input, textarea, select, label {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(214, 177, 106, 0.22);
-  box-shadow: 
+  box-shadow:
     0 12px 36px rgba(0, 0, 0, 0.65),
     0 0 25px rgba(214, 177, 106, 0.08);
   display: flex;
@@ -304,7 +342,7 @@ p, span, a, button, input, textarea, select, label {
 .site-header-pill.scrolled .pill-nav-inner {
   background: rgba(11, 11, 15, 0.95);
   border-color: rgba(214, 177, 106, 0.4);
-  box-shadow: 
+  box-shadow:
     0 16px 45px rgba(0, 0, 0, 0.85),
     0 0 35px rgba(214, 177, 106, 0.16);
   transform: translateY(-2px);
@@ -598,7 +636,7 @@ p, span, a, button, input, textarea, select, label {
   border-radius: 46px;
   padding: 10px;
   border: 3px solid #2A2C34;
-  box-shadow: 
+  box-shadow:
     0 0 0 1px #15161A,
     0 25px 60px -15px rgba(0, 0, 0, 0.9),
     0 0 45px rgba(214, 177, 106, 0.2);
@@ -608,7 +646,7 @@ p, span, a, button, input, textarea, select, label {
 
 .phone-device:hover {
   transform: translateY(-4px);
-  box-shadow: 
+  box-shadow:
     0 0 0 1px var(--gold-primary),
     0 30px 70px -20px rgba(0, 0, 0, 0.95),
     0 0 55px rgba(214, 177, 106, 0.35);
@@ -675,13 +713,11 @@ p, span, a, button, input, textarea, select, label {
 .phone-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.65) 0%,
-    rgba(0, 0, 0, 0) 25%,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.9) 100%);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -812,8 +848,15 @@ p, span, a, button, input, textarea, select, label {
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .floating-icon {
@@ -887,7 +930,7 @@ p, span, a, button, input, textarea, select, label {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, rgba(18, 18, 21, 0.2) 0%, rgba(18, 18, 21, 0.85) 100%),
-              linear-gradient(to top, rgba(18, 18, 21, 0.95) 0%, transparent 50%);
+    linear-gradient(to top, rgba(18, 18, 21, 0.95) 0%, transparent 50%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1330,7 +1373,7 @@ p, span, a, button, input, textarea, select, label {
 .poster-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.85) 100%);
   z-index: 1;
 }
 
@@ -1697,7 +1740,7 @@ p, span, a, button, input, textarea, select, label {
   transition: all 0.2s ease;
 }
 
-.chip-radio:checked + .chip-label {
+.chip-radio:checked+.chip-label {
   background: rgba(214, 177, 106, 0.15);
   border-color: var(--gold-primary);
   color: var(--gold-highlight);
@@ -2050,35 +2093,45 @@ p, span, a, button, input, textarea, select, label {
     gap: 40px;
     text-align: center;
   }
+
   .hero-content {
     margin: 0 auto;
   }
+
   .hero-badge-wrap {
     justify-content: center;
   }
+
   .hero-cta-group {
     justify-content: center;
   }
+
   .hero-stats {
     justify-content: center;
   }
+
   .premiere-card {
     grid-template-columns: 1fr;
   }
+
   .support-container-grid {
     grid-template-columns: 1fr;
   }
+
   .poster-showcase-grid {
     grid-template-columns: 1fr;
   }
+
   .prayer-grid {
     grid-template-columns: 1fr;
   }
+
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin: 0 auto;
   }
+
   .footer-top {
     grid-template-columns: 1fr 1fr;
   }
@@ -2088,27 +2141,36 @@ p, span, a, button, input, textarea, select, label {
   .pill-nav-center {
     display: none;
   }
+
   .mobile-toggle {
     display: inline-flex;
   }
 }
 
 @media (max-width: 768px) {
-  .nav-menu, .header-actions .btn {
+
+  .nav-menu,
+  .header-actions .btn {
     display: none;
   }
+
   .sanctuary-grid {
     grid-template-columns: 1fr;
   }
+
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .floating-card {
-    display: none; /* keep clean on small phones */
+    display: none;
+    /* keep clean on small phones */
   }
+
   .footer-top {
     grid-template-columns: 1fr;
   }
+
   .footer-bottom {
     flex-direction: column;
     gap: 12px;
@@ -2121,17 +2183,21 @@ p, span, a, button, input, textarea, select, label {
     height: 52px;
     padding: 0 8px 0 12px;
   }
+
   .brand-name {
     font-size: 0.92rem;
   }
+
   .brand-icon-wrap {
     width: 32px;
     height: 32px;
   }
+
   .btn-pill {
     padding: 8px 12px;
     font-size: 0.8rem;
   }
+
   .btn-pill span {
     display: none;
   }
